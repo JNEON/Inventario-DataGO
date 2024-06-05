@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./Inventario - Inicio_files/all.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<title>Inventario - Inicio</title>
+		<link type="text/css" rel="stylesheet" href="https://localhost/xampp/Data-GO/media/css/home.css" media="all">
+		<link href="./Inventario - Inicio_files/font-awesome.min.css" rel="stylesheet">
+		<link href="./Inventario - Inicio_files/css2" rel="stylesheet" type="text/css">
+		<link rel="icon" href="media/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="media/css/home.css">
+	</head>
+<body>
+	<div id="main-wrapper">
+		<div id="header">
+		<div class="left">
+			<img src="media/img/logo-D-GO.png" width="90" height="60" alt="Inventario"></a>
+			<div style="font-size:12px; font-style:italic; color:#bbb;">Administrador</div>
+		</div>
+			<div class="right">
+				<a href="" title="Users">Usuarios</a>|				
+				<a href="" title="Settings">Configuración</a>|
+				<a href="index.html" title="Logout">Salir</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<input type="checkbox" class="toggle" id="opmenu" style="display:none">
+		<label for="opmenu" id="open-menu"><i class="fa fa-align-justify"></i> Menu</label>
+		<div id="menu">
+			<ul id="menuli">
+				<li class="active"><a href="" title="Inicio"><i class="fa fa-home"></i> Inicio</a></li>
+				<li><a href="" title="Nuevo Producto"><i class="fa fa-plus"></i> Nuevo producto</a></li>
+				<li><a href="" title="Productos"><i class="fa fa-list-ul"></i> Productos</a></li>
+				<li><a href="" title="Ver Entradas"><i class="fa fa-arrow-down"></i> Entradas</a></li>
+				<li><a href="" title="CVer Salidas"><i class="fa fa-arrow-up"></i> Salidas</a></li>
+				<li><a href="" title="Logs"><i class="fa fa-file-text-o"></i> Logs</a></li>
+				<li><a href="" title="Categorias"><i class="fa fa-folder"></i> Categorías</a></li>
+			</ul>
+		</div>
+		
+		<div class="wrapper-pad">
+			<h2>Inicio</h2>
+			<ul id="selectors">
+				<li class="selected" value="today">Hoy</li>
+				<li value="this_week">Esta semana</li>
+				<li value="this_month">Este mes</li>
+				<li value="this_year">Este año</li>
+				<li value="all_time">Todos</li>
+			</ul>
+			
+			<div id="fdetails">
+				<div class="element">
+					<span>0</span><br>
+					Nuevos<br>
+					Productos
+				</div>
+				<div class="element">
+					<span>0</span><br>
+					Ingresos<br>
+					(Cant. Total)
+				</div>
+				<div class="element">
+					<span>0</span><br>
+					Salidas<br>
+					(Cant. total)
+				</div>
+				<div class="element">
+					<span>$0</span><br>
+					Ingresos
+				</div>
+				<div class="element">
+					<span>$0</span><br>
+					Salidas
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear" style="margin-bottom:40px;height:1px;"></div>
+		<div class="border" style="margin-bottom:30px;"></div>
+		
+		<div class="wrapper-pad">
+			<h3>Estadísticas Generales</h3>
+			<div id="f2details">
+				<div class="element">
+					<span>0</span><br>
+					Productos<br>
+					Registrados
+				</div>
+				<div class="element">
+					<span>0</span><br>
+					Almacén<br>
+					Producto (Cant.)
+				</div>
+				<div class="element">
+					<span>$0</span><br>
+					Valor en Almacén
+				</div>
+				<div class="element">
+					<span>$0</span><br>
+					Valor Salidas
+				</div>
+			</div>
+		</div>
+		<div class="clear" style="height:50px;"></div>
+	</div>
+		<p id="footer-time"></p>
+
+</body>
+<script>
+	let updateTime = function() {
+  	let d = new Date();
+  	document.getElementById("footer-time").innerHTML = "Time right now is: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+	};
+	updateTime();
+	setInterval(updateTime, 1000);
+</script>
+</html>
